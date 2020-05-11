@@ -11,7 +11,7 @@ var getElementsByClassName = function(className
   var func = function(element) {
     console.log("newcall");
     console.log(element.className);
-    console.log(className);
+    //console.log(className);
     //check if its class name matches the target class
     // if (element === null){
     //   break;
@@ -21,21 +21,28 @@ var getElementsByClassName = function(className
     // }
     if (element.className.indexOf(className) > -1) {
       result.push(element);
+      console.log("match");
     }
     //check if the element has children
 
     //if it does, for each child, run func(child)
     if (element.hasChildNodes()) {
-      for (var i = 0; i < Object.values(element.childNodes).length; i++) {
+      //console.log(element.children);
+      //for (var i = 0; i < Object.values(element.children).length; i++) {
+      for (var i = 0; i < element.children.length; i++) {
         //func(i);
-        func(element.childNodes[i]);
+        func(element.children[i]);
       }
       //func of the children
     }
   };
   //need a call of the function on document.body
+  //console.log(typeof document.body.children[0].className);
   func(document.body);
+
   console.log(result);
   // return result variable
   return result;
 };
+
+//typeof document.body.children[1].className
