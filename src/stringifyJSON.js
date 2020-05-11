@@ -7,11 +7,11 @@ var stringifyJSON = function(obj) {
 // your code goes here
   if (typeof obj === "string"){
     return '"' + obj + '"';
-  }  else if (typeof obj === "number"){
+  } else if (typeof obj === "number"){
     return String(obj);
-  }  else if (typeof obj === "boolean"){
+  } else if (typeof obj === "boolean"){
     return String(obj);
-  }  else if(Array.isArray(obj) === true){
+  } else if(Array.isArray(obj) === true){
     var ans = "[";
     if (obj[0] === undefined){
       return "[]";
