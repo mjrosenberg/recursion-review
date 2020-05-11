@@ -46,5 +46,3 @@ var stringifyJSON = function(obj) {
     return '{' + arrayOfKeyValues + '}';
   }
 };
-// https://github.com/elmarek/ghrphx10-recursion-review.git
-
